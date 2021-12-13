@@ -29,6 +29,7 @@
     "@sendgrid/mail": "^7.4.4",
     "bcrypt": "^5.0.1",
     "cookie": "^0.4.1",
+    "cors": "^2.8.5",
     "create-next-app": "^12.0.7",
     "framer-motion": "^4",
     "js-cookie": "^2.2.1",
