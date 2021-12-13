@@ -42,8 +42,8 @@ export async function connectToDatabase() {
     // });
 
     const mongoURL =
-      process.env.NODE_ENV === 'development' ? process.env.LOCAL_MONGODB : process.env.MONGODB_URI;
-    // 'mongodb+srv://appunik:Qwerty1@cluster0.0mybp.mongodb.net/Cluster0?retryWrites=true';
+      // process.env.NODE_ENV === 'development' ? process.env.LOCAL_MONGODB : process.env.MONGODB_URI;
+      'mongodb+srv://appunik:Qwerty1@cluster0.0mybp.mongodb.net/Cluster0?retryWrites=true';
 
     cached.promise = MongoClient.connect(mongoURL, opts).then((client) => {
       return {
