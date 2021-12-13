@@ -35,7 +35,7 @@ export const deleteColumn = createAsyncThunk(
 
     const response = await fetch(url, {
       method: 'DELETE',
-      mode: 'cors',
+      mode: 'no-cors',
       cache: 'no-cache',
       credentials: 'same-origin',
       headers: {
@@ -78,7 +78,7 @@ export const addColumnToBoard = createAsyncThunk(
 
     const response = await fetch(url, {
       method: 'POST',
-      mode: 'cors',
+      mode: 'no-cors',
       cache: 'no-cache',
       credentials: 'same-origin',
       headers: {
@@ -110,7 +110,7 @@ export const updateColumn = createAsyncThunk(
 
     const response = await fetch(url, {
       method: 'PATCH',
-      mode: 'cors',
+      mode: 'no-cors',
       cache: 'no-cache',
       credentials: 'same-origin',
       headers: {
@@ -142,7 +142,7 @@ export const updateColumnSequence = createAsyncThunk(
 
     const response = await fetch(url, {
       method: 'PATCH',
-      mode: 'cors',
+      mode: 'no-cors',
       cache: 'no-cache',
       credentials: 'same-origin',
       headers: {

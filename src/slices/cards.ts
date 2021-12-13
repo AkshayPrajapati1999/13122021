@@ -44,7 +44,7 @@ export const deleteCard = createAsyncThunk(
 
     const response = await fetch(url, {
       method: 'DELETE',
-      mode: 'cors',
+      mode: 'no-cors',
       cache: 'no-cache',
       credentials: 'same-origin',
       headers: {
@@ -92,7 +92,7 @@ export const addCard = createAsyncThunk('card/addCard', async (columnId: string,
 
   const response = await fetch(url, {
     method: 'POST',
-    mode: 'cors',
+    mode: 'no-cors',
     cache: 'no-cache',
     credentials: 'same-origin',
     headers: {
@@ -117,7 +117,7 @@ export const updateCard = createAsyncThunk(
 
     const response = await fetch(url, {
       method: 'PATCH',
-      mode: 'cors',
+      mode: 'no-cors',
       cache: 'no-cache',
       credentials: 'same-origin',
       headers: {
@@ -151,7 +151,7 @@ export const updateCardSequence = createAsyncThunk(
 
     const response = await fetch(url, {
       method: 'PATCH',
-      mode: 'cors',
+      mode: 'no-cors',
       cache: 'no-cache',
       credentials: 'same-origin',
       headers: {

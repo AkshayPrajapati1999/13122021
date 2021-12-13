@@ -48,7 +48,7 @@ const InviteModal = () => {
 
     const response = await fetch(url, {
       method: 'POST',
-      mode: 'cors',
+      mode: 'no-cors',
       cache: 'no-cache',
       credentials: 'same-origin',
       headers: {

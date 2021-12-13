@@ -10,7 +10,7 @@ const verifyToken = async ({ email, boardId }) => {
 
   const response = await fetch(URL, {
     method: 'PATCH',
-    mode: 'cors',
+    mode: 'no-cors',
     cache: 'no-cache',
     credentials: 'same-origin',
     headers: {
