@@ -83,7 +83,7 @@ const SignUp = (): JSX.Element => {
 
     const response = await fetch(url, {
       method: 'POST',
-      mode: 'cors',
+      mode: 'no-cors',
       cache: 'no-cache',
       credentials: 'same-origin',
       headers: {

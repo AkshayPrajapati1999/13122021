@@ -14,7 +14,7 @@ const WelcomeScreen = (): JSX.Element => {
           p="4rem">
           <Box>
             <Text fontSize={['40px', '40px', '50px', '50px']} fontWeight="bold" lineHeight="50px">
-              AppUnik helps teams move work forward.
+              App Unik helps teams move work forward.
             </Text>
             <Text
               fontSize={['1rem', '1rem', '1.5rem', '1.5rem']}

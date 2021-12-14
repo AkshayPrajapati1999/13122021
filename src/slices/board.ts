@@ -34,7 +34,7 @@ export const saveBoard = createAsyncThunk('board/save', async (obj, { getState }
 
   const response = await fetch(url, {
     method: 'PATCH',
-    mode: 'cors',
+    mode: 'no-cors',
     cache: 'no-cache',
     credentials: 'same-origin',
     headers: {
@@ -68,7 +68,7 @@ export const deleteBoard = createAsyncThunk('board/delete', async (obj, { getSta
 
   const response = await fetch(url, {
     method: 'DELETE',
-    mode: 'cors',
+    mode: 'no-cors',
     cache: 'no-cache',
     credentials: 'same-origin',
     headers: {

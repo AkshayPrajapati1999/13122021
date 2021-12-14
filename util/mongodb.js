@@ -1,14 +1,14 @@
 import { MongoClient } from 'mongodb';
 
-const { MONGODB_URI, MONGODB_DB } = process.env;
+// const { MONGODB_URI, MONGODB_DB } = process.env;
 
-if (!MONGODB_URI) {
-  throw new Error('Please define the MONGODB_URI environment variable inside .env.local');
-}
+// if (!MONGODB_URI) {
+//   throw new Error('Please define the MONGODB_URI environment variable inside .env.local');
+// }
 
-if (!MONGODB_DB) {
-  throw new Error('Please define the MONGODB_DB environment variable inside .env.local');
-}
+// if (!MONGODB_DB) {
+//   throw new Error('Please define the MONGODB_DB environment variable inside .env.local');
+// }
 
 /**
  * Global is used here to maintain a cached connection across hot reloads
@@ -43,12 +43,15 @@ export async function connectToDatabase() {
 
     const mongoURL =
       // process.env.NODE_ENV === 'development' ? process.env.LOCAL_MONGODB : process.env.MONGODB_URI;
-      'mongodb+srv://appunik:Qwerty1@cluster0.0mybp.mongodb.net/Cluster0?retryWrites=true';
+      // 'mongodb+srv://appunik:Qwerty1@cluster0.0mybp.mongodb.net/Cluster0?retryWrites=true';
+
+      // 'mongodb+srv://appunik:Qwerty1@cluster0.0mybp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+      'mongodb+srv://appunik:Qwerty1@cluster0.0mybp.mongodb.net/Cluster0?authSource=admin&replicaSet=atlas-4ia21k-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true';
 
     cached.promise = MongoClient.connect(mongoURL, opts).then((client) => {
       return {
         client,
-        db: client.db(MONGODB_DB)
+        db: client.db('trelllo')
       };
     });
   }
