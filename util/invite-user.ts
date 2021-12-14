@@ -1,6 +1,6 @@
 import checkEnvironment from '@/util/check-environment';
 
-const verifyToken = async ({ email, boardId }) => {
+const verifyToken = async ({ email, boardId }): Promise<boolean> => {
   const host = checkEnvironment();
   const URL = `${host}/api/invite-user`;
   const data = {
@@ -10,14 +10,10 @@ const verifyToken = async ({ email, boardId }) => {
 
   const response = await fetch(URL, {
     method: 'PATCH',
-    mode: 'no-cors',
-    cache: 'no-cache',
-    credentials: 'same-origin',
     headers: {
       'Content-Type': 'application/json'
     },
     redirect: 'follow',
-    referrerPolicy: 'no-referrer',
     body: JSON.stringify(data)
   });
 
