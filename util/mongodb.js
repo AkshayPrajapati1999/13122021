@@ -46,7 +46,7 @@ export async function connectToDatabase() {
       // 'mongodb+srv://appunik:Qwerty1@cluster0.0mybp.mongodb.net/Cluster0?retryWrites=true';
 
       // 'mongodb+srv://appunik:Qwerty1@cluster0.0mybp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
-      'mongodb+srv://appunik:Qwerty1@cluster0.0mybp.mongodb.net/Cluster0?authSource=admin&replicaSet=atlas-4ia21k-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true';
+      'mongodb+srv://appunik:Qwerty1@cluster0.0mybp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 
     cached.promise = MongoClient.connect(mongoURL, opts).then((client) => {
       return {
