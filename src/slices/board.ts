@@ -34,14 +34,10 @@ export const saveBoard = createAsyncThunk('board/save', async (obj, { getState }
 
   const response = await fetch(url, {
     method: 'PATCH',
-    mode: 'no-cors',
-    cache: 'no-cache',
-    credentials: 'same-origin',
     headers: {
       'Content-Type': 'application/json'
     },
     redirect: 'follow',
-    referrerPolicy: 'no-referrer',
     body: JSON.stringify(data)
   });
 
@@ -68,14 +64,10 @@ export const deleteBoard = createAsyncThunk('board/delete', async (obj, { getSta
 
   const response = await fetch(url, {
     method: 'DELETE',
-    mode: 'no-cors',
-    cache: 'no-cache',
-    credentials: 'same-origin',
     headers: {
       'Content-Type': 'application/json'
     },
-    redirect: 'follow',
-    referrerPolicy: 'no-referrer'
+    redirect: 'follow'
   });
 
   const json = await response.json();
