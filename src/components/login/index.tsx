@@ -51,6 +51,7 @@ const Login = () => {
       body: JSON.stringify(data)
     });
 
+    console.log({ asdasd: response });
     const result = await response.json();
     setIsFetching(false);
 
