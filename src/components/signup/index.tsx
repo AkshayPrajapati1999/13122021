@@ -66,13 +66,13 @@ const SignUp = (): JSX.Element => {
     e.preventDefault();
     setIsCreatingStatus(true);
 
-    // const id = shortId.generate();
+    const id = shortId.generate();
     const host = checkEnvironment();
 
     const { email, password, confirmPassword, fullName } = values;
 
     const data = {
-      // id,
+      id,
       email: email,
       password: password,
       confirmPassword: confirmPassword,
