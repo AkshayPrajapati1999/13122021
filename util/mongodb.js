@@ -51,7 +51,7 @@ export async function connectToDatabase() {
     cached.promise = MongoClient.connect(mongoURL, opts).then((client) => {
       return {
         client,
-        db: client.db(MONGODB_DB)
+        db: client.db(mongoURL)
       };
     });
   }
