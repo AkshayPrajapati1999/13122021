@@ -44,14 +44,10 @@ export const deleteCard = createAsyncThunk(
 
     const response = await fetch(url, {
       method: 'DELETE',
-      mode: 'no-cors',
-      cache: 'no-cache',
-      credentials: 'same-origin',
       headers: {
         'Content-Type': 'application/json'
       },
-      redirect: 'follow',
-      referrerPolicy: 'no-referrer'
+      redirect: 'follow'
     });
 
     const inJSON = await response.json();
@@ -92,14 +88,10 @@ export const addCard = createAsyncThunk('card/addCard', async (columnId: string,
 
   const response = await fetch(url, {
     method: 'POST',
-    mode: 'no-cors',
-    cache: 'no-cache',
-    credentials: 'same-origin',
     headers: {
       'Content-Type': 'application/json'
     },
     redirect: 'follow',
-    referrerPolicy: 'no-referrer',
     body: JSON.stringify(data)
   });
 
@@ -117,14 +109,10 @@ export const updateCard = createAsyncThunk(
 
     const response = await fetch(url, {
       method: 'PATCH',
-      mode: 'no-cors',
-      cache: 'no-cache',
-      credentials: 'same-origin',
       headers: {
         'Content-Type': 'application/json'
       },
       redirect: 'follow',
-      referrerPolicy: 'no-referrer',
       body: JSON.stringify(obj)
     });
 
@@ -151,14 +139,10 @@ export const updateCardSequence = createAsyncThunk(
 
     const response = await fetch(url, {
       method: 'PATCH',
-      mode: 'no-cors',
-      cache: 'no-cache',
-      credentials: 'same-origin',
       headers: {
         'Content-Type': 'application/json'
       },
       redirect: 'follow',
-      referrerPolicy: 'no-referrer',
       body: JSON.stringify(data)
     });
 

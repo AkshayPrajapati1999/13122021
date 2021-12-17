@@ -80,17 +80,12 @@ const SignUp = (): JSX.Element => {
     };
 
     const url = `${host}/api/register`;
-
     const response = await fetch(url, {
       method: 'POST',
-      mode: 'no-cors',
-      cache: 'no-cache',
-      credentials: 'same-origin',
       headers: {
         'Content-Type': 'application/json'
       },
       redirect: 'follow',
-      referrerPolicy: 'no-referrer',
       body: JSON.stringify(data)
     });
 

@@ -35,14 +35,10 @@ export const deleteColumn = createAsyncThunk(
 
     const response = await fetch(url, {
       method: 'DELETE',
-      mode: 'no-cors',
-      cache: 'no-cache',
-      credentials: 'same-origin',
       headers: {
         'Content-Type': 'application/json'
       },
-      redirect: 'follow',
-      referrerPolicy: 'no-referrer'
+      redirect: 'follow'
     });
 
     const inJSON = await response.json();
@@ -78,14 +74,10 @@ export const addColumnToBoard = createAsyncThunk(
 
     const response = await fetch(url, {
       method: 'POST',
-      mode: 'no-cors',
-      cache: 'no-cache',
-      credentials: 'same-origin',
       headers: {
         'Content-Type': 'application/json'
       },
       redirect: 'follow',
-      referrerPolicy: 'no-referrer',
       body: JSON.stringify(data)
     });
 
@@ -110,14 +102,10 @@ export const updateColumn = createAsyncThunk(
 
     const response = await fetch(url, {
       method: 'PATCH',
-      mode: 'no-cors',
-      cache: 'no-cache',
-      credentials: 'same-origin',
       headers: {
         'Content-Type': 'application/json'
       },
       redirect: 'follow',
-      referrerPolicy: 'no-referrer',
       body: JSON.stringify(data)
     });
 
@@ -142,14 +130,10 @@ export const updateColumnSequence = createAsyncThunk(
 
     const response = await fetch(url, {
       method: 'PATCH',
-      mode: 'no-cors',
-      cache: 'no-cache',
-      credentials: 'same-origin',
       headers: {
         'Content-Type': 'application/json'
       },
       redirect: 'follow',
-      referrerPolicy: 'no-referrer',
       body: JSON.stringify(data)
     });
 

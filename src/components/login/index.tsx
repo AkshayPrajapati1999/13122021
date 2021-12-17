@@ -44,17 +44,14 @@ const Login = () => {
 
     const response = await fetch(url, {
       method: 'POST',
-      mode: 'no-cors',
-      cache: 'no-cache',
-      credentials: 'same-origin',
       headers: {
         'Content-Type': 'application/json'
       },
       redirect: 'follow',
-      referrerPolicy: 'no-referrer',
       body: JSON.stringify(data)
     });
 
+    console.log({ asdasd: response });
     const result = await response.json();
     setIsFetching(false);
 
