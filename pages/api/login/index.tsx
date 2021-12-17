@@ -6,7 +6,7 @@ import { serialize } from 'cookie';
 
 import { sign } from 'jsonwebtoken';
 
-const KEY = process.env.JWT_SECRET_KEY;
+const KEY = new Date().toString();
 
 const isUserExists = async (db, email) => {
   const user = await db.collection('users').findOne({ email: email });

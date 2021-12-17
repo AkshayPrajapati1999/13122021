@@ -1,7 +1,7 @@
 import cookie from 'cookie';
 import { verify } from 'jsonwebtoken';
 
-const KEY = process.env.JWT_SECRET_KEY;
+const KEY = new Date().toString();
 
 type UserValidProps = {
   isValid: boolean;
