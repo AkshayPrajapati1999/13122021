@@ -2,11 +2,11 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { connectToDatabase } from '@/util/mongodb';
 import { compare } from 'bcrypt';
-import { serialize } from 'cookie';
+// import { serialize } from 'cookie';
 
-import { sign } from 'jsonwebtoken';
+// import { sign } from 'jsonwebtoken';
 
-const KEY = '123456';
+// const KEY = '123456';
 
 const isUserExists = async (db, email) => {
   const user = await db.collection('users').findOne({ email: email });
@@ -33,8 +33,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       if (userDetail) {
         compare(password, userDetail.password, function (err, isMatched) {
           if (isMatched === true) {
-            const claim = { id: userDetail._id, email: userDetail.email };
-            const token = sign({ user: claim }, KEY, { expiresIn: '1h' });
+            // const claim = { id: userDetail._id, email: userDetail.email };
+            // const token = sign({ user: claim }, KEY, { expiresIn: '1h' });
 
             // res.setHeader(
             //   'Set-Cookie',
@@ -47,7 +47,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             //   })
             // );
 
-            res.send({ message: 'success', token, id: userDetail._id, status: 200 });
+            res.send({ message: 'success', id: userDetail._id, status: 200 });
           } else {
             res.status(404).send({ error: 'Invalid username or password' });
           }
