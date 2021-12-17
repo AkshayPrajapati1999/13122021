@@ -6,7 +6,7 @@ import { serialize } from 'cookie';
 
 import { sign } from 'jsonwebtoken';
 
-const KEY = new Date().toString();
+const KEY = '123456';
 
 const isUserExists = async (db, email) => {
   const user = await db.collection('users').findOne({ email: email });
@@ -36,16 +36,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             const claim = { id: userDetail._id, email: userDetail.email };
             const token = sign({ user: claim }, KEY, { expiresIn: '1h' });
 
-            res.setHeader(
-              'Set-Cookie',
-              serialize('token', token, {
-                httpOnly: true,
-                secure: process.env.NODE_ENV !== 'development',
-                maxAge: 60 * 60 * 24 * 1000,
-                sameSite: 'strict',
-                path: '/'
-              })
-            );
+            // res.setHeader(
+            //   'Set-Cookie',
+            //   serialize('token', token, {
+            //     httpOnly: true,
+            //     secure: process.env.NODE_ENV !== 'development',
+            //     maxAge: 60 * 60 * 24 * 1000,
+            //     sameSite: 'strict',
+            //     path: '/'
+            //   })
+            // );
 
             res.send({ message: 'success', token, id: userDetail._id, status: 200 });
           } else {
