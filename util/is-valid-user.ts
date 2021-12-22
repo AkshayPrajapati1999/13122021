@@ -1,7 +1,7 @@
-import cookie from 'cookie';
-import { verify } from 'jsonwebtoken';
+// import cookie from 'cookie';
+// import { verify } from 'jsonwebtoken';
 
-const KEY = new Date().toString();
+// const KEY = new Date().toString();
 
 type UserValidProps = {
   isValid: boolean;
@@ -15,12 +15,11 @@ const isValidUser = (ctx): UserValidProps => {
   if (typeof window === 'undefined') {
     // Check if cookie is present
     if (ctx.req && ctx.req.headers && ctx.req.headers.cookie) {
-      const cookies = cookie.parse(ctx.req.headers.cookie);
-      const token = cookies.token;
+      // const cookies = cookie.parse(ctx.req.headers.cookie);
+      // const token = cookies.token;
 
       try {
         // isAuthenticated = verify(token);
-        isAuthenticated = verify(token, KEY);
       } catch (e) {
         console.log('Invalid user');
       }
