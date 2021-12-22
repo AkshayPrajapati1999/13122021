@@ -11,6 +11,8 @@ LoginPageWithStore.getInitialProps = async (ctx) => {
   const userDetails = isValidUser(ctx);
 
   if (userDetails && userDetails.isValid) {
+    // eslint-disable-next-line no-debugger
+    debugger;
     ctx.res.writeHead(307, {
       Location: '/home'
     });
