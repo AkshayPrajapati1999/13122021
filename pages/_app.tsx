@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import React from 'react';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import '@/src/styles/default.css';

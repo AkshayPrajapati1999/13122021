@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Box, Heading, Avatar, Tooltip } from '@chakra-ui/react';
 
 import PropType from 'prop-types';

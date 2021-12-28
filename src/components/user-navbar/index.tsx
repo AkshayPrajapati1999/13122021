@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/link-passhref */
 import React, { FC } from 'react';
 import {
   Button,
