@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { Box, Image, Text } from '@chakra-ui/react';
 
 const ErrorPage = () => {
