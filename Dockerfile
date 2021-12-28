@@ -10,8 +10,6 @@ WORKDIR /usr/src/app/trello
 COPY package.json /usr/src/app/trello
 COPY yarn.lock /usr/src/app/trello
 
-RUN nvm install v14.17
-RUN npm install -g yarn
 RUN yarn install
 
 # Copying source files
