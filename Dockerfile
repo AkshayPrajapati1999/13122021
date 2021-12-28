@@ -10,7 +10,7 @@ WORKDIR /usr/src/app/trello
 COPY package.json /usr/src/app/trello
 COPY yarn.lock /usr/src/app/trello
 
-RUN yarn install
+RUN yarn install --ignore-engines 
 
 # Copying source files
 COPY . /usr/src/app/trello
