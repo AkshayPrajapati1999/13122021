@@ -3,7 +3,7 @@ export default function checkEnvironment(): string {
     // process.env.NODE_ENV === 'development'
     //   ? 'http://localhost:3000'
     //   : 'https://peaceful-tor-06418.herokuapp.com';
-    'http://localhost:3000';
+    'http://trello-appunik-qzfu5.ondigitalocean.app';
 
   return envUrl;
 }
