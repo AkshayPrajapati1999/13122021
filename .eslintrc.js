@@ -29,7 +29,7 @@ module.exports = {
     'plugin:prettier/recommended' // Make this the last element so prettier config overrides other formatting rules
   ],
   rules: {
-    'prettier/prettier': ['error', {}, { usePrettierrc: true }],
+    'prettier/prettier': ['error', { endOfLine: 'auto' }, { usePrettierrc: true }],
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 0,
     '@typescript-eslint/explicit-function-return-type': 'off',
